@@ -8,10 +8,11 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
     {path:'', component:FooterComponent, children:[
-      {path:'perfil', component:PerfilComponent}
+      {path:'perfil', component:PerfilComponent},
+      {path:'home', component:HomeComponent}
     ]}
-  ]},
-  {path:'home', component:HomeComponent}
+  ]}
+  
 ];
 
 @NgModule({
