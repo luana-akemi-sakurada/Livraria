@@ -1,1 +1,20 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+/* styles.css */
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Medium.ttf') format('truetype');
+  }
+  
+@font-face {
+    font-family: 'Popins-regular';
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'Poppins-bold';
+  src: url('./assets/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  

@@ -1,0 +1,15 @@
+.imagem-fundo {
+  background: url(../../assets/imgs/fundo.png) top/cover no-repeat;
+}
+
+.titulo {
+  font-family: Poppins-bold;
+  font-size: 60px;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.3);
+}
