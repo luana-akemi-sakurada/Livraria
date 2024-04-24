@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+
+.container-do-card{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.card-origin{
+    width: 325px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgb(0,0,0,0.2);
+    margin: 20px;
+}
+.conteudo{
+    padding: 20px;
+}
+
+.descricao-livro{
+    font-size: 0.75rem;
+    color: #777;
+
+}
+
+.titulo-livro{
+    font-weight: 900;
+}

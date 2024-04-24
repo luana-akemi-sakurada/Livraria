@@ -7,4 +7,5 @@ import { Component,Input } from '@angular/core';
 })
 export class CardComponent {
 // fazer componente do card e personalizar a pagina
+
 }
