@@ -13,6 +13,10 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
 import { CriarLivroComponent } from './criar-livro/criar-livro.component';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+
 
 @NgModule({
   declarations: [
@@ -30,6 +34,9 @@ import { CriarLivroComponent } from './criar-livro/criar-livro.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule  
   ],
   providers: [
     provideClientHydration()

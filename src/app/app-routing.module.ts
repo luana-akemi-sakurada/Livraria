@@ -6,6 +6,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
+import { CriarLivroComponent } from './criar-livro/criar-livro.component';
 
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
@@ -14,6 +15,7 @@ const routes: Routes = [
       {path: 'home',   component:HomeComponent},
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},
+      {path: 'criar_livro', component: CriarLivroComponent},
     ]}
   ]}
 ];
