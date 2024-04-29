@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
+import { CriarLivroComponent } from './criar-livro/criar-livro.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.co
     PerfilComponent,
     SobreNosComponent,
     PerfilComponent,
-    DashboardAdiminComponent
+    DashboardAdiminComponent,
+    CriarLivroComponent
   ],
   imports: [
     BrowserModule,
