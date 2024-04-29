@@ -9,11 +9,11 @@ import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.co
 
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
-    {path:'', component:FooterComponent, children:[
+     {path:'', component:FooterComponent, children:[
       {path: 'perfil', component:PerfilComponent},
       {path: 'home',   component:HomeComponent},
-      {path: 'sobre',  component: SobreNosComponent },,
-      {path:'adm', component: DashboardAdiminComponent},
+      {path: 'sobre',  component: SobreNosComponent },
+      {path: 'adm', component: DashboardAdiminComponent},
     ]}
   ]}
 ];
