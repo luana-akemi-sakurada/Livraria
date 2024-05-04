@@ -1,0 +1,6 @@
+.navbar-nav .nav-link {
+    margin-right: 40px; 
+}
+.nav-link:hover {
+    transform: scale(1.05); 
+}
