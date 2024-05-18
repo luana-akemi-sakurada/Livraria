@@ -1,0 +1,27 @@
+<div class="container my-5">
+    <h1>Cadastro</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <div class="my-2">
+            <label for="user">Usuario: </label>
+            <input id="user" type="text" class="form-control" formControlName="user">
+            <div class="text-danger" *ngIf="loginForm.controls?.['user']?.touched">
+                <span *ngIf="loginForm.controls?.['user']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="loginForm.controls?.['user']?.errors?.['pattern']">O seu nome de usuario precisa ter no minimo 4 letras e não pode conter números ou caracteres especiais</span>
+            </div>
+        </div>
+        <div class="my-2">
+            <label for="senha">Senha: </label>
+            <input id="senha" type="text" class="form-control" formControlName="senha">
+            <div class="text-danger" *ngIf="loginForm.controls?.['senha']?.touched">
+                <span *ngIf="loginForm.controls?.['senha']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="loginForm.controls?.['senha']?.errors?.['pattern']">A sua senha precisa conter no minimo 8 caracteres, entre eles letras maiúsculas, minúscula, números e caracteres especiais</span>
+            </div>
+        </div>
+        <br>
+        <button type="submit" [disabled]="loginForm.invalid">Cadastrar</button>
+    </form>
+    <div class="text-success" *ngIf="loginConcluido">
+        <span>Login feito com sucesso!</span>
+    </div>
+</div>
+<router-outlet></router-outlet>
