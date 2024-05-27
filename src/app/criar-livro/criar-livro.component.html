@@ -26,8 +26,12 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="ImageInput" class="form-label">Sinopse</label>
-            <textarea id="ImageInput" class="form-control" placeholder="Imagem" formControlName="sinopse"></textarea>
+            <label for="UrlImagem" class="form-label">Url Imgem</label>
+            <input type="text" id="UrlImagem" class="form-control" placeholder="UrlImagem" formControlName="imagem">
+        </div>
+        <div class="mb-3">
+            <label for="ImageInput" class="form-label">Imagem</label>
+            <input type="file" id="ImageInput" class="form-control" (change)="selectFile($event)">
         </div>
         <button class="btn btn-primary" (click)="salvar()">Submit</button>
     </form>

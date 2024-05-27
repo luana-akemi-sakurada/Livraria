@@ -29,7 +29,22 @@ export class CriarLivroComponent {
 
 
   constructor(private livroService: LivroService, private router: ActivatedRoute) { }
+  
+  selectFile(event: any) {  
 
+    const file = event.target.files[0];
+    
+    if (file != null) {
+      console.log(123); 
+      this.livroService.uploadImagem(file).then(result => {
+        result.ref.getDownloadURL().then(url => {
+          console.log(url);
+          this.formGroup.controls.imagem.setValue(url);
+        });
+      });
+    }
+  }
+    
   
   salvar(): void {
     console.log(this.formGroup.controls.nome.value);

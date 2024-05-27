@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environment/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule  
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
   ],
   providers: [
     provideClientHydration()
