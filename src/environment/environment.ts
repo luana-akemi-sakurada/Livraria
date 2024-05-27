@@ -7,7 +7,7 @@ export const environment = {
         projectId: "testeangulara",
         storageBucket: "testeangulara.appspot.com",
         messagingSenderId: "260501343293",
-        appId: "1:260501343293:web:f9f560222e2a8500f96e54",
-        measurementId: "G-4NC0SKB1PR"
+        appId: "1:260501343293:web:40fb8a71fb8afb09f96e54",
+        measurementId: "G-1DFE1D1DZH"
     }
 };

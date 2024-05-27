@@ -13,7 +13,8 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
 import { CriarLivroComponent } from './criar-livro/criar-livro.component';
-import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
+import { environment } from '../environment/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
@@ -34,7 +35,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule  
   ],
