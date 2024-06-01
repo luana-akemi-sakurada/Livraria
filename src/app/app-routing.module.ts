@@ -6,6 +6,8 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
 
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
@@ -14,6 +16,8 @@ const routes: Routes = [
       {path: 'home',   component:HomeComponent},
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},
+      {path: 'login', component:LoginComponent},
+      {path: 'cadastro', component:CadastroComponent}
     ]}
   ]}
 ];
