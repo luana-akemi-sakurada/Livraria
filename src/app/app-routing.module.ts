@@ -8,6 +8,7 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
+import { ExplorarComponent } from './explorar/explorar.component';
 
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
@@ -17,7 +18,8 @@ const routes: Routes = [
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},
       {path: 'login', component:LoginComponent},
-      {path: 'cadastro', component:CadastroComponent}
+      {path: 'cadastro', component:CadastroComponent},
+      {path: 'explorar', component:ExplorarComponent}
     ]}
   ]}
 ];

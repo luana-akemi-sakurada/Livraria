@@ -14,6 +14,7 @@ import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.co
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExplorarComponent } from './explorar/explorar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     PerfilComponent,
     DashboardAdiminComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    ExplorarComponent
   ],
   imports: [
     BrowserModule,
