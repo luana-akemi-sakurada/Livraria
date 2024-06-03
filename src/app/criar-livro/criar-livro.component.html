@@ -1,0 +1,38 @@
+<section class="col-sm-10 mx-auto m-5">
+    <form [formGroup]="formGroup">
+        <div class="mb-3">
+            <label for="TextInput" class="form-label">Nome</label>
+            <input type="text" id="TextInput" class="form-control" placeholder="Nome" formControlName="nome">
+        </div>
+        <div class="mb-3">
+            <label for="AutorInput" class="form-label">Autor</label>
+            <input type="text" id="AutorInput" class="form-control" placeholder="Autor" formControlName="autor">
+        </div>
+        <div class="mb-3">
+            <label for="EditoraInput" class="form-label">Editora</label>
+            <input type="text" id="EditoraInput" class="form-control" placeholder="Editora" formControlName="editora">
+        </div>
+        <div class="mb-3">
+            <label for="SinopseInput" class="form-label">Sinopse</label>
+            <textarea id="SinopseInput" class="form-control" placeholder="Sinopse" formControlName="sinopse"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="Categoria" class="form-label">Categoria</label>
+            <select id="Categoria" class="form-select" formControlName="categoria">
+                <option value="Suspense">Suspense</option>
+                <option value="Romance">Romance</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Ficção">Ficção</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="UrlImagem" class="form-label">Url Imgem</label>
+            <input type="text" id="UrlImagem" class="form-control" placeholder="UrlImagem" formControlName="imagem">
+        </div>
+        <div class="mb-3">
+            <label for="ImageInput" class="form-label">Imagem</label>
+            <input type="file" id="ImageInput" class="form-control" (change)="selectFile($event)">
+        </div>
+        <button class="btn btn-primary" (click)="salvar()">Submit</button>
+    </form>
+</section>

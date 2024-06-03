@@ -11,10 +11,18 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
+
+import { CriarLivroComponent } from './criar-livro/criar-livro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { environment } from '../environment/environment';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExplorarComponent } from './explorar/explorar.component';
+
 
 @NgModule({
   declarations: [
@@ -27,6 +35,7 @@ import { ExplorarComponent } from './explorar/explorar.component';
     SobreNosComponent,
     PerfilComponent,
     DashboardAdiminComponent,
+    CriarLivroComponent,
     LoginComponent,
     CadastroComponent,
     ExplorarComponent
@@ -34,7 +43,10 @@ import { ExplorarComponent } from './explorar/explorar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
   ],
   providers: [
     provideClientHydration()
