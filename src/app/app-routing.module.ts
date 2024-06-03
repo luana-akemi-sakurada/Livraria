@@ -7,6 +7,10 @@ import { HomeComponent } from './home/home.component';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
 import { CriarLivroComponent } from './criar-livro/criar-livro.component';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { ExplorarComponent } from './explorar/explorar.component';
+
 
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
@@ -16,6 +20,10 @@ const routes: Routes = [
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},
       {path: 'criar_livro', component: CriarLivroComponent},
+      {path: 'login', component:LoginComponent},
+      {path: 'cadastro', component:CadastroComponent},
+      {path: 'explorar', component:ExplorarComponent}
+
     ]}
   ]}
 ];

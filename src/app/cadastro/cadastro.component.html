@@ -1,0 +1,51 @@
+<div class="container my-5">
+    <h1>Cadastro</h1>
+    <form [formGroup]="cadastroForm" (ngSubmit)="cadastroUser()">
+        <div class="my-2">
+            <label for="user">Usuario: </label>
+            <input id="user" type="text" class="form-control" formControlName="user">
+            <div class="text-alert" *ngIf="cadastroForm.controls?.['user']?.touched">
+                <span *ngIf="cadastroForm.controls?.['user']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="cadastroForm.controls?.['user']?.errors?.['pattern']">O seu nome de usuario precisa ter no minimo 4 letras e não pode conter números ou caracteres especiais</span>
+            </div>
+        </div>
+        <div class="my-2">
+            <label for="email">Email: </label>
+            <input id="email" type="text" class="form-control" formControlName="email">
+            <div class="text-alert" *ngIf="cadastroForm.controls?.['email']?.touched">
+                <span *ngIf="cadastroForm.controls?.['email']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="cadastroForm.controls?.['email']?.errors?.['email']">Insira um email valiso</span>
+            </div>
+        </div>
+        <div class="my-2">
+            <label for="nome">Nome: </label>
+            <input id="nome" type="text" class="form-control" formControlName="nome">
+            <div class="text-alert" *ngIf="cadastroForm.controls?.['nome']?.touched">
+                <span *ngIf="cadastroForm.controls?.['nome']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="cadastroForm.controls?.['nome']?.errors?.['pattern']">O seu nome precisa ter no minimo 2 letras e não pode conter números ou caracteres especiais</span>
+            </div>
+        </div>
+        <div class="my-2">
+            <label for="senha">Senha: </label>
+            <input id="senha" type="text" class="form-control" formControlName="senha">
+            <div class="text-danger" *ngIf="cadastroForm.controls?.['senha']?.touched">
+                <span *ngIf="cadastroForm.controls?.['senha']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="cadastroForm.controls?.['senha']?.errors?.['pattern']">A sua senha precisa conter no minimo 8 caracteres, entre eles letras maiúsculas, minúscula, números e caracteres especiais</span>
+            </div>
+        </div>
+        <div class="my-2">
+            <label for="confirm">Confirmar senha: </label>
+            <input id="confirm" type="text" class="form-control" formControlName="senhaConfirm">
+            <div class="text-danger" *ngIf="cadastroForm.controls?.['nome']?.touched">
+                <span *ngIf="cadastroForm.controls?.['nome']?.errors?.['required']">Esse campo é obrigatorio</span>
+                <span *ngIf="cadastroForm.errors?.['mismatch'] && cadastroForm.controls['senhaConfirm']?.touched">As senhas não coincidem</span>
+            </div>
+        </div>
+        <br>
+        <button type="submit" [disabled]="cadastroForm.invalid">Cadastrar</button>
+    </form>
+    <div class="text-success" *ngIf="cadastroConcluido">
+        <span>Cadastro feito com sucesso!</span>
+    </div>
+</div>
+<router-outlet></router-outlet>

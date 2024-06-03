@@ -10,14 +10,18 @@ import { CardComponent } from './card/card.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
-
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
+
 import { CriarLivroComponent } from './criar-livro/criar-livro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environment/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { LoginComponent } from './login/login.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ExplorarComponent } from './explorar/explorar.component';
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     SobreNosComponent,
     PerfilComponent,
     DashboardAdiminComponent,
-    CriarLivroComponent
+    CriarLivroComponent,
+    LoginComponent,
+    CadastroComponent,
+    ExplorarComponent
   ],
   imports: [
     BrowserModule,
