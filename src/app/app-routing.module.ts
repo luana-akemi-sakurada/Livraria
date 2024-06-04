@@ -10,6 +10,7 @@ import { CriarLivroComponent } from './criar-livro/criar-livro.component';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
+import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component'
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
       {path: 'perfil', component:PerfilComponent},
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},
+      {path: 'contato', component: PaginaDeContatoComponent},
       {path: 'criar_livro', component: CriarLivroComponent},
       {path: 'login', component:LoginComponent},
       {path: 'cadastro', component:CadastroComponent},

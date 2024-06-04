@@ -10,6 +10,6 @@ export class SobreNosComponent {
   constructor(private router: Router) { }
 
   voltarParaPaginaHome(): void {
-    this.router.navigate(['/home']);
+    this.router.navigate(['']);
   }
 }
