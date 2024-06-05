@@ -1,0 +1,16 @@
+.carrinho-compra {
+  width: 21px;
+  height: 28px;
+}
+
+.div-carrinho {
+  width: 65px;
+  justify-content: center;
+  background: transparent;
+  border: transparent;
+  align-items: center;
+}
+
+.divisao-formulario {
+  width: 80%;
+}
