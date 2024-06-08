@@ -36,8 +36,8 @@
         <div class="my-2">
             <label for="confirm">Confirmar senha: </label>
             <input id="confirm" type="text" class="form-control" formControlName="senhaConfirm">
-            <div class="text-danger" *ngIf="cadastroForm.controls?.['nome']?.touched">
-                <span *ngIf="cadastroForm.controls?.['nome']?.errors?.['required']">Esse campo é obrigatorio</span>
+            <div class="text-danger" *ngIf="cadastroForm.controls?.['senhaConfirm']?.touched">
+                <span *ngIf="cadastroForm.controls?.['senhaConfirm']?.errors?.['required']">Esse campo é obrigatorio</span>
                 <span *ngIf="cadastroForm.errors?.['mismatch'] && cadastroForm.controls['senhaConfirm']?.touched">As senhas não coincidem</span>
             </div>
         </div>
