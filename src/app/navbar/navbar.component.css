@@ -4,3 +4,7 @@
 .nav-link:hover {
     transform: scale(1.05); 
 }
+
+.logo-livraria{
+    width: 30px;
+}

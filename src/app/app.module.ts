@@ -19,8 +19,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { ExplorarComponent } from './explorar/explorar.component';
+import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
 
 
 @NgModule({
@@ -37,7 +37,8 @@ import { ExplorarComponent } from './explorar/explorar.component';
     CriarLivroComponent,
     LoginComponent,
     CadastroComponent,
-    ExplorarComponent
+    ExplorarComponent,
+    PaginaDeContatoComponent
   ],
   imports: [
     BrowserModule,
