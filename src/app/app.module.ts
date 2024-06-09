@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
+import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.
     LoginComponent,
     CadastroComponent,
     ExplorarComponent,
-    PaginaDeContatoComponent
+    PaginaDeContatoComponent,
+    CarrinhoCompraComponent
   ],
   imports: [
     BrowserModule,

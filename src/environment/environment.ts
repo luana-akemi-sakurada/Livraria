@@ -1,13 +1,12 @@
 export const environment = {
     production: false,
     firebase: {
-        apiKey: "AIzaSyBnZCw_dM-vEKfvtUYSDsxXv-wz9YPuI60",
-        authDomain: "testeangulara.firebaseapp.com",
-        databaseURL: "https://testeangulara-default-rtdb.firebaseio.com",
-        projectId: "testeangulara",
-        storageBucket: "testeangulara.appspot.com",
-        messagingSenderId: "260501343293",
-        appId: "1:260501343293:web:40fb8a71fb8afb09f96e54",
-        measurementId: "G-1DFE1D1DZH"
+        apiKey: "AIzaSyBkrnlJD60IuRHf49SaZr0BSt2aYg_Rus8",
+        authDomain: "base-de-dados-livraria.firebaseapp.com",
+        projectId: "base-de-dados-livraria",
+        storageBucket: "base-de-dados-livraria.appspot.com",
+        messagingSenderId: "1018641017515",
+        appId: "1:1018641017515:web:854f7c75f7dd59210c25ee",
+        measurementId: "G-DVPXEJDKPD"
     }
 };
