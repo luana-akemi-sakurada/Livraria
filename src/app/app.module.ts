@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
+import { EditarDeletarLivrosComponent } from './editar-deletar-livros/editar-deletar-livros.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.
     LoginComponent,
     CadastroComponent,
     ExplorarComponent,
-    PaginaDeContatoComponent
+    PaginaDeContatoComponent,
+    EditarDeletarLivrosComponent
   ],
   imports: [
     BrowserModule,

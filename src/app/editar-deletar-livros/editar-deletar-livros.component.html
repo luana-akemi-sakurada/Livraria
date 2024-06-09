@@ -1,0 +1,41 @@
+<div class="container m-5 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            Editar e Deletar Livros
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Editora</th>
+                        <th scope="col">Sinopse</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Imagem</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let livro of livros">
+                        <th scope="col">{{livro.key}}</th>
+                        <td>{{livro.nome}}</td>
+                        <td>{{livro.autor}}</td>
+                        <td>{{livro.editora}}</td>
+                        <td>{{livro.sinopse}}</td>
+                        <td>{{livro.categoria}}</td>
+                        <td> <img src="{{livro.imagem}}" width="30%"></td>
+                        <td>
+                            <button type="button" class="btn btn-primary" >Editar</button>  
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger" >Excluir</button>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
