@@ -17,7 +17,8 @@ import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.compo
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
     {path:'', component:FooterComponent, children:[      
-      {path: '',   component:HomeComponent},
+      {path: '',   component:HomeComponent},   
+      {path: 'home',   component:HomeComponent},
       {path: 'perfil', component:PerfilComponent},
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},

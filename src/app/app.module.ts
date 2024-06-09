@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,7 +13,6 @@ import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
 import { DashboardAdiminComponent } from './dashboard-adimin/dashboard-adimin.component';
 
 import { CriarLivroComponent } from './criar-livro/criar-livro.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { environment } from '../environment/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';

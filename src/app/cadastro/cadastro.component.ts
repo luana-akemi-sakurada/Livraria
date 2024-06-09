@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Usuario } from './model/cadastro.model';
+import { CadastroService } from './service/cadastro.service';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -16,6 +20,8 @@ export class CadastroComponent {
     senhaConfirm: new FormControl('',[Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$')])
   });
 
+  constructor(private cadastroService: CadastroService, private router: Router) { }
+
 
   confirmarSenha(control: AbstractControl): { [key: string]: boolean } | null {
     const senha = control.get('senha');
@@ -30,7 +36,16 @@ export class CadastroComponent {
 
   cadastroUser() {
     if (this.cadastroForm.valid){
-        this.cadastroConcluido = true;
+      
+      var user = new Usuario();
+
+      user.nickname = this.cadastroForm.controls.user.value?.toString();
+      user.nome = this.cadastroForm.controls.nome.value?.toString();
+      user.email = this.cadastroForm.controls.email.value?.toString();
+      user.senha = this.cadastroForm.controls.senha.value?.toString();
+      this.cadastroService.salvar(user)
+      this.cadastroConcluido = true;
+      this.router.navigate(['/perfil']);
     }
     else {
       this.cadastroForm.markAsUntouched

@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'livraria';
+
+  setSession(key: string, value: string){
+    localStorage.setItem(key, value)
+  }
+  getSession(key: string): any{
+    return localStorage.getItem(key)
+  }
 }

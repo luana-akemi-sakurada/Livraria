@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" routerLink ="/">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink ="/explorar">Explorar livros</a>
@@ -20,11 +20,14 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="/contato">Nossos contatos</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/perfil">Perfil</a>
+        </li>
       </ul>
       <form class="d-flex" role="signup">
-        <button class="btn btn-outline-secondary btn-sm" routerLink="/login" type="login">Login</button>
+        <a routerLink="/login"><button class="btn btn-outline-secondary btn-sm"  type="login">Login</button></a>
         <div class="ms-2"></div>
-        <button class="btn btn-outline-light btn-sm" routerLink="/cadastro" type="signup">Cadastro</button>
+        <a routerLink="/cadastro"><button class="btn btn-outline-light btn-sm" type="signup">Cadastro</button></a>
       </form>
     </div>
   </div>
