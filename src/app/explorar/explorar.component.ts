@@ -13,18 +13,23 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 export class ExplorarComponent implements OnInit {
 
   public livros: any;
-  getParam() {
-    const id = this.routerParam.snapshot.queryParams['id'];
-  }
+  
   constructor(
     private livroService: LivroService, 
-    private router: Router) { }
+    private router: Router,
+    private routerParam: ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
       this.livroService.listar().subscribe(livros=>{
         console.log(livros);
         this.livros = livros;
       }); 
+  }
+
+  
+  getParam() {
+    const id = this.routerParam.snapshot.queryParams['id'];
   }
 
 }
