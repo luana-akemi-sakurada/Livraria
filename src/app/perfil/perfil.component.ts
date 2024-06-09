@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { SessaoService } from '../Sessao/sessao.service';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -10,7 +11,7 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private sessaoService: SessaoService, private db: AngularFireDatabase) {}
+  constructor(private sessaoService: SessaoService, private db: AngularFireDatabase, private router: Router) {}
   private userInfo: any = null
   public infoForm: any = null;
   isEditing: boolean = false;
@@ -41,6 +42,7 @@ export class PerfilComponent implements OnInit {
 
   deletarUsuario(): void {
     this.db.list('usuarios').remove(this.userInfo.key);
+    this.router.navigate(['/cadastro']);
   }
 
   AtualizarUsuario(key: string): void {

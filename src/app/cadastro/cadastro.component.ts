@@ -3,6 +3,7 @@ import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/fo
 import { Usuario } from './model/cadastro.model';
 import { CadastroService } from './service/cadastro.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -19,7 +20,7 @@ export class CadastroComponent {
     senhaConfirm: new FormControl('',[Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$')])
   });
 
-  constructor(private cadastroService: CadastroService, private router: ActivatedRoute) { }
+  constructor(private cadastroService: CadastroService, private router: Router) { }
 
 
   confirmarSenha(control: AbstractControl): { [key: string]: boolean } | null {
@@ -44,6 +45,7 @@ export class CadastroComponent {
       user.senha = this.cadastroForm.controls.senha.value?.toString();
       this.cadastroService.salvar(user)
       this.cadastroConcluido = true;
+      this.router.navigate(['/perfil']);
     }
     else {
       this.cadastroForm.markAsUntouched
