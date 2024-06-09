@@ -42,7 +42,6 @@ export class CadastroComponent {
       user.nome = this.cadastroForm.controls.nome.value?.toString();
       user.email = this.cadastroForm.controls.email.value?.toString();
       user.senha = this.cadastroForm.controls.senha.value?.toString();
-
       this.cadastroService.salvar(user)
       this.cadastroConcluido = true;
     }
