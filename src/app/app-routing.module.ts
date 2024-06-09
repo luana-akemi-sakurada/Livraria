@@ -16,7 +16,8 @@ import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
     {path:'', component:FooterComponent, children:[      
-      {path: '',   component:HomeComponent},
+      {path: '',   component:HomeComponent},   
+      {path: 'home',   component:HomeComponent},
       {path: 'perfil', component:PerfilComponent},
       {path: 'sobre',  component: SobreNosComponent },
       {path: 'adm', component: DashboardAdiminComponent},
