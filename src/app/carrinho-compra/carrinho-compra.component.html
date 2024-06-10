@@ -23,13 +23,13 @@
             <td>{{itemCarrinho.Quantidade}}</td>
             <td>R$50,00</td>
             <td>
-              <button class="btn btn-danger" (click)="deletarLivroDoCarrinho()">Excluir</button>
+              <button class="btn btn-danger" (click)="deletarLivroDoCarrinho(itemCarrinho)">Excluir</button>
             </td>
           </tbody>
         </table>
       </div>
       <div class="botao-comprar-div">
-        <button class="btn btn-secondary" (click)="deletarLivroDoCarrinho()">Comprar</button>
+        <button class="btn btn-secondary" (click)="comprarLivroDoCarrinho()">Comprar</button>
       </div>
     </div>
   </div>
