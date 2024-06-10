@@ -1,3 +1,7 @@
 .info {
     font-weight: bold;
 }
+
+.border2{
+    border-color: blueviolet;
+}

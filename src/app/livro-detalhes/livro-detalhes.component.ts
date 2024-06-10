@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LivroService } from '../criar-livro/service/livro.service';
 import { ActivatedRoute } from '@angular/router';
+import { SessaoService } from '../Sessao/sessao.service';
+import { Carrinho } from '../carrinho-compra/model/carrinho.model';
+import { CarrinhoService } from '../carrinho-compra/service/carrinho.service';
 
 @Component({
   selector: 'app-livro-detalhes',
@@ -16,7 +19,11 @@ export class LivroDetalhesComponent implements OnInit {
     constructor(
       private livroService: LivroService, 
       private router: Router,
-      private route: ActivatedRoute) { }   
+      private route: ActivatedRoute,
+      private carrinhoService: CarrinhoService,
+      private sessao: SessaoService,
+    )
+      { }   
       
   ngOnInit(): void {
     this.teste = this.route.queryParams
@@ -31,5 +38,12 @@ export class LivroDetalhesComponent implements OnInit {
             break
         } }
     }) 
-  }   
+  }  
+  addToCart(nome: string): void{
+    let cart = new Carrinho()
+    cart.keyUser = this.sessao.getUsuario().email
+    cart.keyLivro = nome
+    cart.Quantidade = "1"
+    this.carrinhoService.salvar(cart)
+  } 
 }

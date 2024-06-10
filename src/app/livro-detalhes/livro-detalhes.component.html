@@ -1,24 +1,32 @@
-<div *ngIf="livro" class="container p-0 my-2 mx-auto border border-4 rounded-2 border-warning-emphasis">
+<div *ngIf="livro" class="container p-0 my-2 mx-auto border-4 rounded-2 border-warning-emphasis" style="border: solid 5px; border-color: #eee6d3;">
     <div class="d-flex m-1 p-0 gap-3">
         <div class="p-0">
             <img width="500px" src="{{infoLivro.imagem}}">
         </div>
-        <div class="justify-content-sm-start">
-            <h1>{{infoLivro.nome}}</h1>
-            <div class="d-flex">
-                <p class="info">Autor: </p>
-                <p>{{infoLivro.autor}}</p>
-            </div>
-            <div class="d-flex">
-                <p class="info">Editora: </p>
-                <p>{{infoLivro.editora}}</p>
-            </div>
-            <div class="d-flex">
-                <p class="info">Categoria: </p>
-                <p>{{infoLivro.categoria}}</p>
-            </div>
+        <div class="d-flex flex-column justify-content-between">
             <div>
-                <p>{{infoLivro.sinopse}}</p>
+                <h1>{{infoLivro.nome}}</h1>
+                <div class="d-flex">
+                    <p class="info">Autor: </p>
+                    <p>{{infoLivro.autor}}</p>
+                </div>
+                <div class="d-flex">
+                    <p class="info">Editora: </p>
+                    <p>{{infoLivro.editora}}</p>
+                </div>
+                <div class="d-flex">
+                    <p class="info">Categoria: </p>
+                    <p>{{infoLivro.categoria}}</p>
+                </div>
+                <div>
+                    <p>{{infoLivro.sinopse}}</p>
+                </div>
+            </div>
+            <div class="align-self-end mx-auto">
+                <div class="d-flex justify-content-between">
+                    <h2 class="p-3">R${{infoLivro.preco}}</h2> 
+                    <a (click)="addToCart(infoLivro.nome)" class="btn btn-success align-self-center">Adicionar ao carrinho</a>
+                </div>
             </div>
         </div>
     </div>
