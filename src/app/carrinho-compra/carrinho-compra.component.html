@@ -4,8 +4,7 @@
       <div class="cart-product">
         <table class="table table-responsive">
           <thead>
-            <tr>
-              <th>Sr.No</th>
+            <tr> 
               <th>Nome</th>
               <th>Imagem</th>
               <th>Descrição</th>
@@ -16,9 +15,9 @@
             </tr>
           </thead>
           <tbody *ngFor="let itemCarrinho of carrinho">
-            <td>1</td>
+            {{getInfoLivro(itemCarrinho.keyLivro)}}
             <td>{{itemCarrinho.keyLivro}}</td>
-            <td>Uma imagem</td>
+            <td><img src={{livro.imagem}} style="height: 120px;"></td>
             <td>Descrição do livro</td>
             <td>R$50,00</td>
             <td>{{itemCarrinho.Quantidade}}</td>

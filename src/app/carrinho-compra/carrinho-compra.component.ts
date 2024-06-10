@@ -14,20 +14,26 @@ export class CarrinhoCompraComponent implements OnInit{
   }
   public carrinho: any;
   public livros: any;
+  public livro: any;
 
   ngOnInit(): void {
 
     this.carrinhoService.listar().subscribe(cart=>{
-      console.log(cart);
       this.carrinho = cart;
     }); 
     
     this.livroService.listar().subscribe(livro=>{
-      console.log(livro);
       this.livros = livro;
-    }); 
-    
+    });
   }
-  
+  getInfoLivro(nome: string){
+
+    for(let li in this.livros){
+      if (this.livros[li].nome == nome){
+        this.livro = this.livros[li];
+      }
+    }
+  }
+   
 
 }
