@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
+import { ListarLivrosComponent } from './listar-livros/listar-livros.component';
 import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.component';
 import { LivroDetalhesComponent } from './livro-detalhes/livro-detalhes.component';
 import { ActivatedRoute } from '@angular/router';
@@ -43,6 +44,7 @@ import { EditarDeletarLivrosComponent } from './editar-deletar-livros/editar-del
     CadastroComponent,
     ExplorarComponent,
     PaginaDeContatoComponent,
+    ListarLivrosComponent,
     CarrinhoCompraComponent,
     LivroDetalhesComponent,
     EditarDeletarLivrosComponent

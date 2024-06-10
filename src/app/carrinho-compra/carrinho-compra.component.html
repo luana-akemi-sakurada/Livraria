@@ -1,4 +1,4 @@
-<ng-container *ngIf="true">
+<ng-container >
   <div class="container">
     <div class="card-table">
       <div class="cart-product">
@@ -12,18 +12,22 @@
               <th>Quantidade</th>
               <th>Total</th>
               <th>Ação</th>
+              <th>Ação</th>
             </tr>
           </thead>
           <tbody *ngFor="let itemCarrinho of carrinho">
-            {{getInfoLivro(itemCarrinho.keyLivro)}}
-            <td>{{itemCarrinho.keyLivro}}</td>
-            <td><img src={{livro.imagem}} style="height: 120px;"></td>
-            <td>{{livro.sinopse}}</td>
-            <td>{{livro.preco}}</td>
-            <td>{{itemCarrinho.Quantidade}}</td>
+            {{getInfoLivro(itemCarrinho.value.keyLivro)}}
+            <td>{{itemCarrinho.value.keyLivro}}</td>
+            <td><img src={{livro?.imagem}} style="height: 120px;"></td>
+            <td>{{livro?.sinopse}}</td>
+            <td>{{livro?.preco}}</td>
+            <td><input [readOnly]="!itemCarrinho.controls.isEditing.value" [formControl]="itemCarrinho.controls.Quantidade" ></td>
             <td>R$50,00</td>
             <td>
-              <button class="btn btn-danger" (click)="deletarLivroDoCarrinho(itemCarrinho)">Excluir</button>
+              <button class="btn btn-primary" (click)="atualizarCarrinho(itemCarrinho.controls.key.value , itemCarrinho)">{{itemCarrinho.controls.isEditing.value? "Salvar" : "Editar"}}</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" (click)="deletarLivroDoCarrinho(itemCarrinho.controls.key.value)">Excluir</button>
             </td>
           </tbody>
         </table>
@@ -35,7 +39,7 @@
   </div>
 </ng-container>
 
-<ng-container *ngInf="false">
+<ng-container >
   <div class="container">
     <div class="card">
       <h4 class="card-title">Meu carrinho de compras</h4>
