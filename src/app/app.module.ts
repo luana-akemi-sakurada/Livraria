@@ -23,6 +23,7 @@ import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
 import { LivroDetalhesComponent } from './livro-detalhes/livro-detalhes.component';
 import { ActivatedRoute } from '@angular/router';
+import { EditarDeletarLivrosComponent } from './editar-deletar-livros/editar-deletar-livros.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ActivatedRoute } from '@angular/router';
     CadastroComponent,
     ExplorarComponent,
     PaginaDeContatoComponent,
-    LivroDetalhesComponent
+    LivroDetalhesComponent,
+    EditarDeletarLivrosComponent
   ],
   imports: [
     BrowserModule,
