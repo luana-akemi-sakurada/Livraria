@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LivroService } from '../criar-livro/service/livro.service';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { SessaoService } from '../Sessao/sessao.service';
 import { Carrinho } from '../carrinho-compra/model/carrinho.model';
 import { CarrinhoService } from '../carrinho-compra/service/carrinho.service';
-
+import { ActivatedRoute } from '@angular/router';
+import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -21,6 +21,7 @@ export class ExplorarComponent implements OnInit {
     private livroService: LivroService, 
     private router: Router,
     private sessao: SessaoService,
+    private routerParam: ActivatedRoute,
     private carrinhoService: CarrinhoService) { }
 
   ngOnInit(): void {
@@ -36,6 +37,9 @@ export class ExplorarComponent implements OnInit {
     cart.keyLivro = nome
     cart.Quantidade = "1"
     this.carrinhoService.salvar(cart)
+  
+  getParam() {
+    const id = this.routerParam.snapshot.queryParams['id'];
   }
 
 }

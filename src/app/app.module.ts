@@ -22,6 +22,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
 import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.component';
+import { LivroDetalhesComponent } from './livro-detalhes/livro-detalhes.component';
+import { ActivatedRoute } from '@angular/router';
+import { EditarDeletarLivrosComponent } from './editar-deletar-livros/editar-deletar-livros.component';
 
 
 @NgModule({
@@ -40,7 +43,9 @@ import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.compo
     CadastroComponent,
     ExplorarComponent,
     PaginaDeContatoComponent,
-    CarrinhoCompraComponent
+    CarrinhoCompraComponent,
+    LivroDetalhesComponent,
+    EditarDeletarLivrosComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,7 @@ import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.compo
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireStorageModule,
+    AngularFireStorageModule
   ],
   providers: [
     provideClientHydration()

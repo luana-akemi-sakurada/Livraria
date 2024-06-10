@@ -12,7 +12,9 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component';
 import { CarrinhoCompraComponent } from './carrinho-compra/carrinho-compra.component';
-
+import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component'
+import { LivroDetalhesComponent } from './livro-detalhes/livro-detalhes.component';
+import { EditarDeletarLivrosComponent } from './editar-deletar-livros/editar-deletar-livros.component';
 
 const routes: Routes = [
   {path:'', component:NavbarComponent, children:[
@@ -27,7 +29,11 @@ const routes: Routes = [
       {path: 'login', component:LoginComponent},
       {path: 'cadastro', component:CadastroComponent},
       {path: 'explorar', component:ExplorarComponent},
-      {path: 'compras', component:CarrinhoCompraComponent}
+      {path: 'compras', component:CarrinhoCompraComponent},
+      {path: 'detalhes/:livroNome', component:LivroDetalhesComponent},
+      {path: 'editar-deletar', component:EditarDeletarLivrosComponent},
+      {path: 'explorar', component:ExplorarComponent}
+
     ]}
   ]}
 ];
