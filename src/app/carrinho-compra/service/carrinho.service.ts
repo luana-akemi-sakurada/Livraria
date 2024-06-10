@@ -26,4 +26,8 @@ listar(){
     )
 }
 
+deletarLivroDoCarrinho(key: string): Promise<void> {
+    return this.db.list('carrinho').remove(key);
+  }
+
 }

@@ -25,6 +25,9 @@ export class CriarLivroComponent {
       [Validators.required]),
     imagem: new FormControl('',
       [Validators.required]),
+    preco: new FormControl('',
+      [Validators.required]
+    )
   });
 
 
@@ -61,6 +64,7 @@ export class CriarLivroComponent {
           livro.sinopse = this.formGroup.controls.sinopse.value?.toString();
           livro.categoria = this.formGroup.controls.categoria.value?.toString();
           livro.imagem = this.formGroup.controls.imagem.value?.toString();
+          livro.preco = this.formGroup.controls.preco.value?.toString();
 
           this.livroService.salvar(livro)
         });

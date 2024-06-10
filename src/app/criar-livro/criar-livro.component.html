@@ -38,6 +38,10 @@
                     <label for="ImageInput" class="form-label">Imagem</label>
                     <input type="file" id="ImageInput" class="form-control" (change)="selectFile($event)">
                 </div>
+                <div class="mb-3">
+                    <label for="preco" class="form-label">Preço do livro</label>
+                    <input type="text" id="PrecoInput" class="form-control" formControlName="preco">
+                </div>
                 <button class="btn btn-primary" (click)="salvar()">Cadastrar Livro</button>
             </form>
         </div>

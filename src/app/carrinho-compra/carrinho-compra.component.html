@@ -18,12 +18,12 @@
             {{getInfoLivro(itemCarrinho.keyLivro)}}
             <td>{{itemCarrinho.keyLivro}}</td>
             <td><img src={{livro.imagem}} style="height: 120px;"></td>
-            <td>Descrição do livro</td>
-            <td>R$50,00</td>
+            <td>{{livro.sinopse}}</td>
+            <td>{{livro.preco}}</td>
             <td>{{itemCarrinho.Quantidade}}</td>
             <td>R$50,00</td>
             <td>
-              <button class="btn btn-danger">Excluir</button>
+              <button class="btn btn-danger" (click)="deletarLivroDoCarrinho()">Excluir</button>
             </td>
           </tbody>
         </table>

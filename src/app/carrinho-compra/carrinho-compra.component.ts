@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CarrinhoService } from './service/carrinho.service';
 import { Livro } from '../criar-livro/model/livro.model';
 import { LivroService } from '../criar-livro/service/livro.service';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 
 @Component({
   selector: 'app-carrinho-compra',
@@ -9,7 +10,8 @@ import { LivroService } from '../criar-livro/service/livro.service';
   styleUrl: './carrinho-compra.component.css'
 })
 export class CarrinhoCompraComponent implements OnInit{
-  constructor(private carrinhoService: CarrinhoService, private livroService: LivroService){
+  router: any;
+  constructor(private carrinhoService: CarrinhoService, private livroService: LivroService, private db: AngularFireDatabase){
 
   }
   public carrinho: any;
@@ -33,6 +35,11 @@ export class CarrinhoCompraComponent implements OnInit{
         this.livro = this.livros[li];
       }
     }
+  }
+
+  deletarLivroDoCarrinho(): void {
+    this.db.list('carrinho').remove(this.carrinho.key)
+    this.router.navigate(['/explorar']);
   }
    
 
