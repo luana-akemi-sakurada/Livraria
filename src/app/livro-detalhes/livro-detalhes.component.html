@@ -1,3 +1,25 @@
-<div *ngIf="livro" class="container">
-    <img src="{{livro.image}}">
+<div *ngIf="livro" class="container p-0 my-2 mx-auto border border-4 rounded-2 border-warning-emphasis">
+    <div class="d-flex m-1 p-0 gap-3">
+        <div class="p-0">
+            <img width="500px" src="{{infoLivro.imagem}}">
+        </div>
+        <div class="justify-content-sm-start">
+            <h1>{{infoLivro.nome}}</h1>
+            <div class="d-flex">
+                <p class="info">Autor: </p>
+                <p>{{infoLivro.autor}}</p>
+            </div>
+            <div class="d-flex">
+                <p class="info">Editora: </p>
+                <p>{{infoLivro.editora}}</p>
+            </div>
+            <div class="d-flex">
+                <p class="info">Categoria: </p>
+                <p>{{infoLivro.categoria}}</p>
+            </div>
+            <div>
+                <p>{{infoLivro.sinopse}}</p>
+            </div>
+        </div>
+    </div>
 </div>
