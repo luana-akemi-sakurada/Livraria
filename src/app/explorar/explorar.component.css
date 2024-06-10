@@ -17,4 +17,20 @@
 
 .imagem{
   width: 220px;
+  padding-top: 10px;
+}
+
+.div-imagem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.div-card{
+ width: 25%; 
+}
+
+.estilo-preco{
+  color: green;
+  font-weight: 800;
 }
