@@ -37,9 +37,12 @@ export class ExplorarComponent implements OnInit {
     cart.keyLivro = nome
     cart.Quantidade = "1"
     this.carrinhoService.salvar(cart)
+  }
   
   getParam() {
     const id = this.routerParam.snapshot.queryParams['id'];
   }
 
 }
+
+
