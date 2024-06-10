@@ -41,6 +41,11 @@ export class CarrinhoCompraComponent implements OnInit{
     this.db.list('carrinho').remove(this.carrinho.key)
     this.router.navigate(['/explorar']);
   }
+
+  comprarLivroDoCarrinho(): void {
+    this.db.list('carrinho').remove(this.carrinho.key)
+    this.router.navigate(['/explorar']);
+  }
    
 
 }
