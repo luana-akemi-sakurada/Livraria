@@ -1,0 +1,41 @@
+.card {
+  height: 65vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50px;
+  padding: 12px;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cart-product {
+  height: 65vh;
+  margin: 30px;
+}
+
+.card-table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: none;
+  word-wrap: break-word;
+  background-color: white;
+  background-clip: border-box;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.botao-comprar-div{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}

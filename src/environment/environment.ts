@@ -3,7 +3,7 @@ export const environment = {
     firebase: {
         apiKey: "AIzaSyBnZCw_dM-vEKfvtUYSDsxXv-wz9YPuI60",
         authDomain: "testeangulara.firebaseapp.com",
-        databaseURL: "https://testeangulara-default-rtdb.firebaseio.com",
+        databaseURL: "https://testeangulara-default-rtdb.firebaseio.com/",
         projectId: "testeangulara",
         storageBucket: "testeangulara.appspot.com",
         messagingSenderId: "260501343293",

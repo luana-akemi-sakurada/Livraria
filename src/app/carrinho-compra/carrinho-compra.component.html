@@ -1,0 +1,49 @@
+<ng-container *ngIf="true">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+            <tr> 
+              <th>Nome</th>
+              <th>Imagem</th>
+              <th>Descrição</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let itemCarrinho of carrinho">
+            {{getInfoLivro(itemCarrinho.keyLivro)}}
+            <td>{{itemCarrinho.keyLivro}}</td>
+            <td><img src={{livro.imagem}} style="height: 120px;"></td>
+            <td>{{livro.sinopse}}</td>
+            <td>{{livro.preco}}</td>
+            <td>{{itemCarrinho.Quantidade}}</td>
+            <td>R$50,00</td>
+            <td>
+              <button class="btn btn-danger" (click)="deletarLivroDoCarrinho()">Excluir</button>
+            </td>
+          </tbody>
+        </table>
+      </div>
+      <div class="botao-comprar-div">
+        <button class="btn btn-secondary" (click)="deletarLivroDoCarrinho()">Comprar</button>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngInf="false">
+  <div class="container">
+    <div class="card">
+      <h4 class="card-title">Meu carrinho de compras</h4>
+    </div>
+    <div class="center">
+      <h4>Carrinho vazio!</h4>
+      <h6>Adicione algum item</h6>
+      <button class="btn btn-primary">Vizualizar produtos</button>
+    </div>
+  </div>
+</ng-container>
