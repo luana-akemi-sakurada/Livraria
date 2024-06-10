@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ExplorarComponent } from './explorar/explorar.component';
 import { PaginaDeContatoComponent } from './pagina-de-contato/pagina-de-contato.component'
+import { ListarLivrosComponent } from './listar-livros/listar-livros.component';
 
 
 const routes: Routes = [
@@ -25,8 +26,8 @@ const routes: Routes = [
       {path: 'criar_livro', component: CriarLivroComponent},
       {path: 'login', component:LoginComponent},
       {path: 'cadastro', component:CadastroComponent},
-      {path: 'explorar', component:ExplorarComponent}
-
+      {path: 'explorar', component:ExplorarComponent},
+      {path: 'livros', component:ListarLivrosComponent}
     ]}
   ]}
 ];
