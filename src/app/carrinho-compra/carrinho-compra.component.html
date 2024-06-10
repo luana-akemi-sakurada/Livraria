@@ -15,13 +15,13 @@
               <th>Ação</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody *ngFor="let itemCarrinho of carrinho">
             <td>1</td>
-            <td>A menina que roubava livros</td>
+            <td>{{itemCarrinho.keyLivro}}</td>
             <td>Uma imagem</td>
             <td>Descrição do livro</td>
             <td>R$50,00</td>
-            <td>1</td>
+            <td>{{itemCarrinho.Quantidade}}</td>
             <td>R$50,00</td>
             <td>
               <button class="btn btn-danger">Excluir</button>
