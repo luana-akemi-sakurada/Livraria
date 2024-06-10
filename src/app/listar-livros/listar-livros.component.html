@@ -1,31 +1,39 @@
 <ng-container *ngIf="true">
-    <div class="container">
-      <div class="card-table">
-        <div class="cart-product">
-          <table class="table table-responsive">
-            <thead>
-              <tr> 
-                <th>Nome</th>
-                <th>Imagem</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Total</th>
-                <th>Ação</th>
+  <div class="container m-5 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            Editar e Deletar Livros
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Editora</th>
+                        <th scope="col">Sinopse</th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Imagem</th>
+                    </tr>
+                </thead>
+                <tbody>
+              <tr *ngFor="let livro of forms">
+                  <th scope="col">{{livro.key}}</th>
+                  <td><input type="text" [formControl]="livro.controls.nome" [readonly]="!livro.controls.isEditing.value" style="border: none; width: 100px;"></td>
+                  <td><input type="text" [formControl]="livro.controls.autor" [readonly]="!livro.controls.isEditing.value" style="border: none; width: 100px;"></td>
+                  <td><input type="text" [formControl]="livro.controls.editora" [readonly]="!livro.controls.isEditing.value" style="border: none; width: 100px;"></td>
+                  <td><input type="text" [formControl]="livro.controls.sinopse" [readonly]="!livro.controls.isEditing.value" style="border: none; width: 100px;"></td>
+                  <td><input type="text" [formControl]="livro.controls.categoria" [readonly]="!livro.controls.isEditing.value" style="border: none; width: 100px;"></td>
+                  <td><img src={{livro.controls.imagem.value}} style="height: 120px;"></td>
+                  <td>
+                      <button type="button" class="btn btn-primary" (click)="atualizarLivro(livro.controls.key.value, livro)">{{livro.controls.isEditing.value ? 'Salvar' : 'Editar' }}</button>  
+                  </td>
+                  <td>
+                      <button type="button" class="btn btn-danger" (click)="deletarLivro(livro.controls.key.value)"> Excluir</button>
+                  </td>
               </tr>
-            </thead>
-            <tbody *ngFor="let livro of forms">
-              <td ><input type="text" [formControl]="livro.controls.nome" [readonly]="!livro.controls.isEditing.value"></td>
-              <td><img src={{livro.controls.imagem.value}} style="height: 120px;"></td>
-              <td><input type="text" [formControl]="livro.controls.sinopse" [readonly]="!livro.controls.isEditing.value"></td>
-              <td><input type="text" [formControl]="livro.controls.preco" [readonly]="!livro.controls.isEditing.value"></td>
-              <td>
-                <button class="btn btn-danger" (click)="deletarLivro(livro.controls.key.value)">Excluir</button>
-              </td>
-              <td>
-                <button class="btn btn-danger" (click)="atualizarLivro(livro.controls.key.value, livro)">{{livro.controls.isEditing.value ? 'Salvar' : 'Editar' }}</button>
-              </td>
-            </tbody>
+          </tbody>
           </table>
         </div>
       </div>
