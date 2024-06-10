@@ -23,9 +23,9 @@ export class LivroDetalhesComponent implements OnInit {
     console.log(this.teste._value.id);
     this.livroService.listar().subscribe(livro=>{
     this.livro = livro;
-      for(let i = 0; 1 < this.livro.length; i++) {
+      for(let i = 0; i < this.livro.length; i++) {
         console.log((this.teste.value.id == this.livro[i].nome))
-        if (this.teste.value.id == this.livro[i].nome) {
+        if (this.teste._value.id == this.livro[i].nome) {
             this.infoLivro = this.livro[i]
             console.log(this.infoLivro);
             break
