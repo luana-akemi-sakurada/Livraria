@@ -1,0 +1,76 @@
+.conteudo{
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+
+.conteudo-sobre-nos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.imagem{
+    flex: 1;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.imagem img{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.imagem:hover img{
+    transform: scale(1.1);
+}
+
+.content-texto{
+    flex: 1;
+    margin-left: 20px;
+}
+
+.texto{
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.botaoDalaura{
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(143, 81, 0);
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.botaoDalaura:hover{
+    background-color:  rgb(250, 142, 0);
+}
+
+@media screen and (max-width:768px) {
+    .conteudo-sobre-nos{
+        flex-direction: column;
+    }
+
+    .imagem, content-texto{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    titulo{
+        font-size: 38px;
+    }
+    
+}
